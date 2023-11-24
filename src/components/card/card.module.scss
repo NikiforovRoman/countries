@@ -1,0 +1,29 @@
+.card {
+    border-radius: var(--border-rad);
+    background-color: var(--colors-el);
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    &__img {
+        display: block;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: center;
+    }
+    &__body {
+        padding: 1rem 1.5rem 2rem;
+    }
+    &__title {
+        margin: 0;
+        font-weight: var(--fw-bold);
+        margin-bottom: 1rem;
+    }
+    &__list {
+        list-style: none;
+        font-size: var(--fs-sm);
+    }
+    &__item {
+        line-height: 1.5rem;
+    }
+}

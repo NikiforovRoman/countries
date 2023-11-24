@@ -1,0 +1,15 @@
+.search {
+    padding: 1rem 2rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-rad);
+    width: 100%;
+    margin-bottom: 1.5rem;
+    background-color: var(--colors-el);
+
+    @media(min-width: 767px) {
+        margin-bottom: 0;
+        width: 280px;
+    }
+}

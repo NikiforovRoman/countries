@@ -1,0 +1,26 @@
+.header {
+    box-shadow: var(--shadow);
+    background-color: var(--colors-el);
+    margin-bottom: 2rem;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+    &__title {
+        font-size: var(--fs-md);
+        font-weight: var(--fw-bold);
+    }
+    &__link {
+        text-decoration: none;
+        color: var(--colors-text);
+    }
+    &__switcher {
+        color: var(--colors-text);
+        text-transform: capitalize;
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-bold);
+        cursor: pointer;
+    }
+}
