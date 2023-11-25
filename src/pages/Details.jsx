@@ -6,6 +6,7 @@ import Container from "../components/container/Container";
 import { searchByCountry } from "../API/config";
 import MyButton from "../components/UI/button/MyButton";
 import Detail from "../components/detail/Detail";
+import { CircularProgress } from "@mui/material";
 
 const Details = () => {
   const { name } = useParams();
@@ -20,6 +21,7 @@ const Details = () => {
         <MyButton>
           <IoArrowBack style={{ marginRight: "0.4rem" }} size={16} /> Back
         </MyButton>
+        {!country && <CircularProgress style={{position: 'absolute', right: '50%'}} />}
         {country && <Detail {...country} />}
       </Container>
     </>

@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 
 const Header = () => {
   const [theme, setTheme] = useState('light');
-
+  
   const toggleTheme = () => setTheme(theme === 'light' ? 'dark': 'light')
 
   useEffect(() => {

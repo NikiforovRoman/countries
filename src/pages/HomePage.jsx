@@ -17,9 +17,7 @@ function HomePage({ countries, setCountries }) {
   );
 
   useEffect(() => {
-    if (!countries.length) {
-      axios.get(ALL_COUNTRIES).then(({ data }) => setCountries(data));
-    }
+    if (!countries.length) axios.get(ALL_COUNTRIES).then(({ data }) => setCountries(data));  
   });
 
   return (
