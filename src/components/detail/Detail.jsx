@@ -21,6 +21,7 @@ const Detail = ({
   let nativeName = Object.values(name.nativeName);
   let currencyArray = Object.values(currencies);
   let languagesArray = Object.values(languages);
+  console.log(nativeName);
 
   const [neighbours, setNeighbours] = useState([]);
   useEffect(() => {
@@ -42,7 +43,7 @@ const Detail = ({
                 <b>Official name: </b> {name.official}
               </li>
               <li className={s.detail__item}>
-                <b>Native names:</b> {nativeName.map((n) => <div style={{marginBottom: 5}} key={n.common}>{n.common}, {n.official}</div>)}
+                <b>Native name:</b> {nativeName[0].official}
               </li>
               <li className={s.detail__item}>
                 <b>Population:</b> {population.toLocaleString()}
