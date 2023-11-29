@@ -34,7 +34,7 @@ const List = ({ countries, paginate, setPaginate }) => {
           return (
             <Card
               key={countryInfo.name}
-              onClick={() => push(`/country/${c.name.common}`)}
+              onClick={() => push(`/country/${c.name.official}`)}
               {...countryInfo}
             />
           );

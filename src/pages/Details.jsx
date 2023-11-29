@@ -14,6 +14,7 @@ const Details = () => {
   useEffect(() => {
     axios.get(searchByCountry(name)).then(({ data }) => setCountry(data[0]));
   }, [name]);
+  console.log(country);
 
   return (
     <>

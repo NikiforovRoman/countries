@@ -27,8 +27,9 @@ const Detail = ({
     if (borders.length)
       axios
         .get(filterByCode(borders))
-        .then(({ data }) => setNeighbours(data.map((c) => c.name.common)));
+        .then(({ data }) => setNeighbours(data.map((c) => c.name.official)));
   }, [borders]);
+
   return (
     <div className={s.detail}>
       <div className={s.detail__wrapper}>
@@ -38,10 +39,13 @@ const Detail = ({
           <div className={s.detail__lists}>
             <ul className={s.detail__list}>
               <li className={s.detail__item}>
-                <b>Native name:</b> {nativeName[0].common}
+                <b>Official name: </b> {name.official}
               </li>
               <li className={s.detail__item}>
-                <b>Population:</b> {population}
+                <b>Native names:</b> {nativeName.map((n) => <div style={{marginBottom: 5}} key={n.common}>{n.common}, {n.official}</div>)}
+              </li>
+              <li className={s.detail__item}>
+                <b>Population:</b> {population.toLocaleString()}
               </li>
               <li className={s.detail__item}>
                 <b>Region:</b> {region}
@@ -77,13 +81,13 @@ const Detail = ({
             ) : (
               <div className={s.detail__buttons}>
                 {neighbours.map((b) => (
-                  <button
-                    className={s.detail__button}
-                    key={b}
-                    onClick={() => push(`/country/${b}`)}
-                  >
-                    {b}
-                  </button>
+                    <button
+                      className={s.detail__button}
+                      key={b}
+                      onClick={() => push(`/country/${b}`)}
+                    >
+                      {b}
+                    </button>
                 ))}
               </div>
             )}

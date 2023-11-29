@@ -1,11 +1,11 @@
 .detail {
     margin-top: 4rem;
-
     &__wrapper {
         width: 100%;
         display: grid;
         grid-template-columns: 100%;
         gap: 2rem;
+        margin-bottom: 1rem;
 
         @media (min-width: 767px) {
             grid-template-columns: minmax(100px, 400px) 1fr;
